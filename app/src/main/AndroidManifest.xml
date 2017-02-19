@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lenovo.weather">
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="15"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:name="com.example.lenovo.weather.MyApplication"
+        android:icon="@drawable/weather"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <meta-data
+            android:name="com.thinkland.juheapi.openid"
+            android:value="JHe7b2df1019801e39ef0c5f4b03ffcf9e"/>
+
+        <activity android:name="com.example.lenovo.weather.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.lenovo.weather.CityActivity"
+            android:screenOrientation="portrait"/>
+        <service android:name="com.example.lenovo.weather.Service.WeatherService" />
+    </application>
+
+</manifest>
